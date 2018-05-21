@@ -2,12 +2,12 @@ import csv
 import gensim
 from gensim.models.wrappers import FastText
 import pickle
-COMPUTE_WORD2VEC = 0
+COMPUTE_WORD2VEC = 1
 filename = 'semantic_data.pkl'
 rel_filename = 'semantic_rel.npy'
 
 if COMPUTE_WORD2VEC:
-    class_info = 'data/object150_info.csv'
+    class_info = 'data/edited_object150_info.csv'
     class_name = []
     with open(class_info, newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
